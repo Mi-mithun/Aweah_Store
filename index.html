@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AwrahStore — Premium Products</title>
+  <link rel="icon" href="https://img.icons8.com/fluency/48/lightning-bolt.png" type="image/png"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ---- NAVBAR ---- -->
+<nav class="navbar navbar-expand-md" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="#home">
+      <img src="https://img.icons8.com/fluency/32/lightning-bolt.png" alt="logo" width="26" height="26"/>
+      Awrah<span style="color:var(--accent)">Store</span>
+      <span class="brand-dot"></span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" style="color:var(--text-muted)">
+      <i class="bi bi-list fs-5"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <ul class="navbar-nav ms-auto gap-1">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn-primary-custom ms-3 d-none d-lg-inline-flex" style="padding:10px 22px; font-size:.85rem;">
+        <i class="bi bi-envelope"></i> Get in Touch
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ---- HERO --- -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 hero-content fade-up">
+        <div class="hero-badge">
+          <img src="https://img.icons8.com/fluency/20/verified-badge.png" width="14" height="14" alt=""/>
+          Premium Quality Products
+        </div>
+        <h1 class="hero-title">
+          Discover Products<br/>That <span class="accent">Elevate</span><br/>Your <span class="accent2">Lifestyle</span>
+        </h1>
+        <p class="hero-sub">
+          AwrahStore brings you a curated collection of premium products — designed to transform the way you live, work, and create.
+        </p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#products" class="btn-primary-custom">
+            <i class="bi bi-grid-3x3-gap"></i> Browse Products
+          </a>
+          <a href="#about" class="btn-outline-custom">
+            <i class="bi bi-play-circle"></i> Our Story
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="stat-num">2.4k+</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+          <div>
+            <div class="stat-num">180+</div>
+            <div class="stat-label">Products</div>
+          </div>
+          <div>
+            <div class="stat-num">99%</div>
+            <div class="stat-label">Satisfaction</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 fade-up" style="transition-delay:.15s;">
+        <div class="hero-visual">
+          <div class="hero-img-wrap">
+            <div class="hero-img-ring"></div>
+            <div class="hero-img-inner">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop" alt="Hero Product"/>
+            </div>
+            <div class="hero-float-badge float-1">
+              <div class="float-icon purple"><i class="bi bi-stars"></i></div>
+              <div>
+                <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem;">Top Rated</div>
+                <div style="color:var(--text-muted);font-size:.75rem;">4.9 / 5.0 stars</div>
+              </div>
+            </div>
+            <div class="hero-float-badge float-2">
+              <div class="float-icon green"><i class="bi bi-shield-check"></i></div>
+              <div>
+                <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem;">Secure & Fast</div>
+                <div style="color:var(--text-muted);font-size:.75rem;">Free shipping worldwide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ---- PRODUCTS ---- -->
+<section id="products">
+  <div class="container">
+    <div class="row align-items-end mb-4 g-3 fade-up">
+      <div class="col-md-6">
+        <span class="section-tag"><i class="bi bi-grid-3x3-gap-fill"></i> Our Collection</span>
+        <h2 class="section-title mb-1">Featured Products</h2>
+        <p class="section-sub">Click any product to see full details. Add or remove products below.</p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-md-end">
+        <div class="search-wrap w-100" style="max-width:340px;">
+          <i class="bi bi-search search-icon"></i>
+          <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off"/>
+          <i class="bi bi-x search-clear" id="searchClear" title="Clear"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="admin-bar fade-up" id="adminBar">
+      <img src="https://img.icons8.com/fluency/24/add.png" width="20" alt="" style="opacity:.7;flex-shrink:0;"/>
+      <input type="text" id="addName" placeholder="Product name" style="flex:1; min-width:130px;"/>
+      <input type="text" id="addPrice" placeholder="Price (e.g. $99)" style="width:110px;"/>
+      <input type="text" id="addCategory" placeholder="Category" style="width:120px;"/>
+      <input type="url" id="addImg" placeholder="Image URL (optional)" style="flex:1.5; min-width:160px;"/>
+      <textarea id="addDesc" placeholder="Product description..." style="flex:2; min-width:200px; height:40px; resize:none;"></textarea>
+      <button onclick="addProduct()" class="btn-primary-custom" style="padding:10px 22px; font-size:.86rem; flex-shrink:0;">
+        <i class="bi bi-plus-lg"></i> Add
+      </button>
+    </div>
+
+    <!-- Product Grid -->
+    <div id="product-grid" class="fade-up"></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ---- PRODUCT MODAL ---- -->
+<div class="modal fade" id="productModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalProductTitle">Product Details</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img id="modalImg" src="" alt="Product" class="modal-product-img"/>
+        <div class="modal-product-body">
+          <div class="row">
+            <div class="col-md-8">
+              <h2 class="modal-product-name" id="modalName"></h2>
+              <div class="modal-product-price" id="modalPrice"></div>
+              <p class="modal-product-desc" id="modalDesc"></p>
+              <div class="modal-tags" id="modalTags"></div>
+            </div>
+            <div class="col-md-4 d-flex flex-column justify-content-end gap-2 mt-3 mt-md-0">
+              <div style="background:var(--bg-surface);border:1px solid var(--border);border-radius:12px;padding:16px;">
+                <div style="font-size:.8rem;color:var(--text-muted);margin-bottom:4px;">Category</div>
+                <div style="font-family:'Syne',sans-serif;font-weight:600;font-size:.92rem;" id="modalCategory"></div>
+                <div style="font-size:.8rem;color:var(--text-muted);margin-top:10px;margin-bottom:4px;">Availability</div>
+                <div style="color:#4ade80;font-size:.88rem;font-weight:600;"><i class="bi bi-check-circle-fill me-1"></i>In Stock</div>
+              </div>
+              <button class="btn-buy w-100" onclick="buyNow()"><i class="bi bi-bag-check me-2"></i>Buy Now</button>
+              <button class="btn-cart w-100" onclick="addToCart()"><i class="bi bi-cart-plus me-2"></i>Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ---- ABOUT ---- -->
+<section id="about">
+  <div class="container">
+    <div class="row g-5 align-items-center mb-5">
+      <div class="col-lg-5 fade-up">
+        <div class="about-img-frame">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&h=500&fit=crop" alt="Company Office"/>
+          <div class="about-img-overlay"></div>
+        </div>
+      </div>
+      <div class="col-lg-7 fade-up" style="transition-delay:.1s;">
+        <span class="section-tag"><i class="bi bi-building"></i> About Us</span>
+        <h2 class="section-title">Built for People Who<br/>Demand the <span style="color:var(--accent)">Best</span></h2>
+        <p class="section-sub mb-4" style="max-width:100%;">
+          Founded in 2019, AwrahStore started with a simple idea — make premium products accessible to everyone. Today we serve thousands of customers across 40+ countries with a focus on quality, trust, and great design.
+        </p>
+
+        <div class="about-card">
+          <div class="about-icon"><i class="bi bi-gem"></i></div>
+          <div>
+            <div class="about-card-title">Premium Quality</div>
+            <div class="about-card-text">Every product goes through a rigorous 15-point quality check before it reaches you.</div>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="about-icon green"><i class="bi bi-arrow-repeat"></i></div>
+          <div>
+            <div class="about-card-title">30-Day Returns</div>
+            <div class="about-card-text">Not happy? Send it back. We handle all returns within 24 hours — no questions asked.</div>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="about-icon"><i class="bi bi-globe2"></i></div>
+          <div>
+            <div class="about-card-title">Global Reach</div>
+            <div class="about-card-text">Shipping to 40+ countries with fast, trackable delivery from our fulfillment centers.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team -->
+    <div class="row fade-up">
+      <div class="col-12 mb-4">
+        <span class="section-tag"><i class="bi bi-people"></i> The Team</span>
+        <h2 class="section-title">People Behind<br/>the <span style="color:var(--accent2)">Brand</span></h2>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <div class="team-card">
+          <img class="team-avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=120&h=120&fit=crop&crop=face" alt="CEO"/>
+          <div class="team-name">Alex Morgan</div>
+          <div class="team-role">Founder & CEO</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <div class="team-card">
+          <img class="team-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&h=120&fit=crop&crop=face" alt="Design Lead"/>
+          <div class="team-name">Sara Chen</div>
+          <div class="team-role">Design Lead</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <div class="team-card">
+          <img class="team-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&crop=face" alt="Tech Lead"/>
+          <div class="team-name">James Park</div>
+          <div class="team-role">Tech Lead</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <div class="team-card">
+          <img class="team-avatar" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=120&h=120&fit=crop&crop=face" alt="Marketing"/>
+          <div class="team-name">Priya Nair</div>
+          <div class="team-role">Marketing Head</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ---- CONTACT ---- -->
+<section id="contact">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5 fade-up">
+        <span class="section-tag"><i class="bi bi-chat-dots"></i> Contact</span>
+        <h2 class="section-title">Let's Start a<br/><span style="color:var(--accent)">Conversation</span></h2>
+        <p class="section-sub mb-4">Have a question, want to partner up, or just want to say hello? We're here and respond within 24 hours.</p>
+
+        <div class="contact-info-item">
+          <div class="ci-icon"><i class="bi bi-envelope"></i></div>
+          <div>
+            <div class="ci-label">Email</div>
+            <div class="ci-value">hello@Awrahstore.com</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ci-icon"><i class="bi bi-telephone"></i></div>
+          <div>
+            <div class="ci-label">Phone</div>
+            <div class="ci-value">+1 (800) 123-4567</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ci-icon"> <i class="bi bi-geo-alt"> </i> </div>
+          <div>
+            <div class="ci-label">Office</div>
+            <div class="ci-value">42 Innovation Drive, San Francisco CA</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ci-icon"><i class="bi bi-clock"></i></div>
+          <div>
+            <div class="ci-label">Working Hours</div>
+            <div class="ci-value">Mon–Fri, 9am – 6pm PST</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 fade-up" style="transition-delay:.1s;">
+        <div class="contact-card">
+          <h5 class="mb-4" style="font-family:'Syne',sans-serif;font-weight:700;">Send us a message</h5>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">First Name</label>
+              <input type="text" class="form-control" placeholder="Your Name"/>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Last Name</label>
+              <input type="text" class="form-control" placeholder="Last Name"/>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" placeholder="yourName@example.com"/>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Subject</label>
+              <select class="form-select">
+                <option value="">Select a subject...</option>
+                <option>Product Inquiry</option>
+                <option>Order Support</option>
+                <option>Returns & Refunds</option>
+                <option>Partnership</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="5" placeholder="Tell us how we can help you..."></textarea>
+            </div>
+            <div class="col-12">
+              <button class="btn-primary-custom w-100 justify-content-center" onclick="submitForm(event)" style="padding:14px;">
+                <i class="bi bi-send"></i> Send Message
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ---- FOOTER ---- -->
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 mb-2">
+        <div class="footer-brand d-flex align-items-center gap-2">
+          <img src="https://img.icons8.com/fluency/32/lightning-bolt.png" width="22" alt=""/>
+          Awrah<span style="color:var(--accent)">Store</span>
+        </div>
+        <p class="footer-desc">Premium products for people who value quality, design, and reliability. Trusted by 2,400+ customers worldwide.</p>
+        <div class="social-links mt-3">
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-heading">Company</div>
+        <div class="footer-links">
+          <a href="#about">About Us</a>
+          <a href="#products">Products</a>
+          <a href="#contact">Careers</a>
+          <a href="#contact">Blog</a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-heading">Support</div>
+        <div class="footer-links">
+          <a href="#contact">Contact Us</a>
+          <a href="#">FAQ</a>
+          <a href="#">Shipping Info</a>
+          <a href="#">Returns</a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-heading">Legal</div>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-heading">Contact</div>
+        <div class="footer-links">
+          <a href="mailto:hello@Awrahstore.com">hello@Awrahstore.com</a>
+          <a href="tel:+18001234567">+1 (800) 123-4567</a>
+          <a href="#">San Francisco, CA</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 AwrahStore. All rights reserved.</p>
+      <p>Made with <span style="color:var(--accent)">♥</span> for premium shoppers</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast align-items-center" role="alert">
+    <div class="d-flex">
+      <div class="toast-body" id="toastMsg"></div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="script.js"></script>
+</body>
+</html>
