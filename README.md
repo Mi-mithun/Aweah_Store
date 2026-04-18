@@ -29,6 +29,3 @@ All product data is stored in a JavaScript array and rendered dynamically using 
 
 ## Live Demo
 [Add GitHub Pages link here]
-
-## GitHub Repository
-[Add repository link here]
